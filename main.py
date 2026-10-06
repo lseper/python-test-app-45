@@ -4,5 +4,5 @@ app = FastAPI()
 
 
 @app.get("/ping")
-def ping():
+def ping() -> str:
     return "pong"
