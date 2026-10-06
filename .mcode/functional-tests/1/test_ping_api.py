@@ -3,7 +3,9 @@ import os
 import pytest
 import requests
 
-BASE_URL = f"http://{os.environ.get('HOST', '127.0.0.1')}:{os.environ.get('PORT', '8000')}"
+HOST = os.environ.get("HOST", "127.0.0.1")
+PORT = os.environ.get("PORT", "8000")
+BASE_URL = f"http://{HOST}:{PORT}"
 
 
 @pytest.fixture(autouse=True)
